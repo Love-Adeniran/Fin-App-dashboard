@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>PFA-using tailwindcss</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <style>
+        @font-face {
+            font-family: 'staple-font';
+            src: url(./stapleFont/Stapel_Bold.otf);
+        }
+
+        @font-face {
+            font-family: 'roboto-font';
+            src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+        }
+    </style> -->
+</head>
+
+<body class="max-w-screen overflow-x-hidden">
+    <div class="flex flex-col max-w-screen md:flex-row bg-[#ffffff] md:w-screen">
+        <div
+            class="bg-current py-2 md:max-h-100   rounded-r-lg md:w-auto w-full fixed bottom-0 left-0 md:static items-center flex flex:row md:flex-col">
+            <div class=" mx-4 px-4 py-2 hidden md:block">
+                <h3 class="font-extrabold text-xl mx-4 text-slate-400  px-4">Finance</h3>
+            </div>
+            <nav class="md:py-2 py-0 px-0 pe-2 md:me-5  mx-auto text-slate-400  ">
+                <ul class="md:py-2 px-0 mx-0 flex flex:row md:flex-col md:items-center ">
+                    <li
+                        class="  hover:border-s-4 hover:border-s-green-900 hover:bg-white hover:text-black hover:rounded-md md:px-4">
+                        <a href="#" class=" text-center">
+                            <div class="flex align-center px-2 py-2 ">
+                                <div class="">
+                                    <span class="px-2 material-symbols-outlined ">home</span>
+                                </div>
+                                <div class="hidden md:block">
+                                    <span class="">Overview</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li
+                        class="  hover:border-s-4 hover:border-s-green-900 hover:bg-white hover:text-black hover:rounded-md md:px-4">
+                        <a href="#" class=" text-center">
+                            <div class="flex align-center  py-2 px-1">
+                                <div class="">
+                                    <span class="px-2 material-symbols-outlined ">
+                                        swap_vert
+                                    </span>
+                                </div>
+                                <div class="hidden md:block">
+                                    <span>Transactions</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li
+                        class="  hover:border-s-4 hover:border-s-green-900 hover:bg-white hover:text-black hover:rounded-md md:px-4">
+                        <a href="#" class=" text-center">
+                            <div class="flex align-center py-2 px-2">
+                                <div class="px-2">
+                                    <i class=" fas fa-thin fa-chart-pie "></i>
+                                </div>
+                                <div class="px-2 hidden md:block">
+                                    <span>Budgets</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li
+                        class="  hover:border-s-4 hover:border-s-green-900 hover:bg-white hover:text-black hover:rounded-md md:px-4">
+                        <a href="#" class=" text-center">
+                            <div class="flex  px-2 py-2 text-start">
+                                <div class="px-2">
+                                    <span class=" material-symbols-outlined">
+                                        money_bag
+                                    </span>
+                                </div>
+                                <div class="px-2 hidden md:block">
+                                    <span>Pots</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="  hover:border-s-4 hover:border-s-green-900 hover:bg-white hover:text-black hover:rounded-md
+                    hover:flex-nowrap md:px-2">
+                        <a href="#" class=" text-center hover:flex-nowrap">
+                            <div class="flex align-center py-2">
+                                <div class="px-2">
+                                    <span class="material-symbols-outlined ">
+                                        table_rows
+                                    </span>
+                                </div>
+                                <div class="hidden md:block ">
+                                    <span>Recurring Bills</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex  text-slate-400 px-4 ">
+                <a href="#" class=" text-center hover:flex-nowrap">
+                    <div class="flex align-center py-2">
+                        <div class="">
+                            <span class="material-symbols-outlined">
+                                fast_rewind
+                            </span>
+                        </div>
+                        <div class="flex-nowrap hidden md:block">
+                            <span>Minimize Menu</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <main class="md:px-px md:py-2 px-px md:mx-auto max-w-screen">
+            <div class=" py-2 px-2 mx-2">
+                <h1 class="text-2xl font-bold">Overview</h1>
+            </div>
+            <div class=" flex  flex-col md:flex-row  ">
+                <div class=" bg-current  py-6 px-4 mx-2 my-2 rounded-xl flex-auto">
+                    <p class=" text-slate-500 text-xs  ">Current Balance</p>
+                    <h4 class="text-white text-xl font-bold">$4,836.00</h4>
+                </div>
+                <div class=" py-6 px-4 mx-2 my-2 rounded-xl bg-white flex-auto">
+                    <p class="font-normal text-slate-500 text-xs ">Income</p>
+                    <h4 class="text-black text-xl font-bold">$4,836.00</h4>
+                </div>
+                <div class=" py-6 px-4 mx-2 my-2 rounded-xl bg-white flex-auto">
+                    <p class="font-normal text-slate-500 text-xs ">Expenses</p>
+                    <h4 class="text-black text-xl font-bold">$4,836.00</h4>
+                </div>
+            </div>
+            <div class="px-2 md:px-0 flex  flex-col md:flex-row justify-evenly">
+                <div class=" px-2 py-2 ">
+                    <!-- pots -->
+                    <div class=" bg-white rounded-xl px-2 py-2">
+                        <div class="flex  text-slate-500 justify-between px-2 py-2 w-auto">
+                            <div class=" mx-2">
+                                <h3 class="font-bold text-black">Pots</h3>
+                            </div>
+                            <div class=" mx-2 hover:cursor-pointer">
+                                <p class="font-light text-xs align-middle">see details <i
+                                        class="text-xs  fa-solid fa-play"></i></p>
+                            </div>
+                        </div>
+                        <div class="px-4 mx-2 flex flex-col md:flex-row ">
+                            <div
+                                class="flex mx-2 my-6 rounded-xl px-4 py-px justify-center items-center bg-red-50 w-auto">
+                                <div class="pe-2">
+                                    <span class="material-symbols-outlined text-4xl text-green-700">
+                                        money_bag
+                                    </span>
+                                </div>
+                                <div class=" text-slate-500 ">
+                                    <p class="text-xs ">Total Saved</p>
+                                    <h3 class="font-bold text-xl text-black px-2">$850</h3>
+                                </div>
+                            </div>
+                            <div class=" mx-2 lg:px-4 md:px-px py-4 flex text-slate-500">
+                                <div class="mx-2 px-2 py-2">
+                                    <div class="border-l-4 border-green-900 rounded px-4  my-2 mx-4">
+                                        <p class="text-xs font-bold ">Savings</p>
+                                        <h3 class="font-bold text-black">$159</h3>
+                                    </div>
+                                    <div class="border-l-4 border-purple-950 rounded px-4 my-2 mx-4">
+                                        <p class="text-xs">Gift</p>
+                                        <h3 class="text-black font-bold">$40</h3>
+                                    </div>
+                                </div>
+                                <div class=" mx-2 px-2 py-2 ">
+                                    <div class="border-l-4 border-cyan-400 rounded px-2  my-2 mx-2">
+                                        <p class="text-xs ">Current Ticket</p>
+                                        <h3 class="text-black  font-bold">$850</h3>
+                                    </div>
+                                    <div class="border-l-4 border-rose-200 rounded px-4  my-2 mx-2">
+                                        <p class="text-xs">New Laptop</p>
+                                        <h3 class="text-black font-bold">$850</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Transactions -->
+                    <div class=" my-4 rounded-xl bg-white">
+                        <div class="flex  text-slate-500 justify-between px-2 py-2 w-auto">
+                            <div class=" mx-2">
+                                <h3 class="font-bold text-black">Transactions</h3>
+                            </div>
+                            <div class=" mx-2 hover:cursor-pointer">
+                                <p class="font-light text-xs align-middle">see details <i
+                                        class="text-xs  fa-solid fa-play"></i></p>
+                            </div>
+                        </div>
+                        <div class="px-4 py-4">
+                            <div class="flex justify-between text-sm border-b my-2">
+                                <div class="flex items-center">
+                                    <div class="px-2 min-w-10 w-10 rounded-full ">
+                                        <img src="./images/ilonnaLilian.jpeg" class="rounded-full  " alt="">
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-bold">Ilonna Lilian Chizoba</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-cyan-400 font-bold text-base">+$75.50</p>
+                                    <p class="font-bold text-xs">19 Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-sm border-b my-2">
+                                <div class="flex items-center">
+                                    <div class="px-2 min-w-10 w-10 ">
+                                        <img src="./images/ilonnaLilian.jpeg" class="rounded-full " alt="">
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-bold">Ilonna Lilian Chizoba</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-base">-$55.50</p>
+                                    <p class="font-bold text-xs">18 Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-sm border-b my-2">
+                                <div class="flex items-center">
+                                    <div class="px-2  w-10 ">
+                                        <img src="./images/ilonnaLilian.jpeg" class="rounded-full " alt="">
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-bold">Ilonna Lilian Chizoba</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-base">-$42.30</p>
+                                    <p class="font-bold text-xs">17 Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-sm border-b my-2">
+                                <div class="flex items-center">
+                                    <div class="px-2  w-10 min-w-10">
+                                        <img src="./images/Love.jfif" class="rounded-full " alt="">
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-bold">Adeniran Love Oluwaseyi</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-cyan-400 font-bold text-base">+$120.00</p>
+                                    <p class="font-bold text-xs">16 Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between my-2">
+                                <div class="flex items-center">
+                                    <div class="px-2  w-10 min-w-10">
+                                        <img src="./images/ilonnaLilian.jpeg" class="rounded-full " alt="">
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-bold">Ilonna Lilian Chizoba</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-base">-$65.00</p>
+                                    <p class="font-bold text-xs ">14 Aug 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 py-2">
+                    <!-- Budgets -->
+                    <div class="rounded-xl bg-white ">
+                        <div class="flex  text-slate-500 justify-between px-2 py-2 w-auto ">
+                            <div class=" mx-2">
+                                <h3 class="font-bold text-black">Budgets</h3>
+                            </div>
+                            <div class=" mx-2 hover:cursor-pointer">
+                                <p class="font-light text-xs align-middle">see details <i
+                                        class="text-xs  fa-solid fa-play"></i></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center lg:px-4  lg:mx-4 md:mx-px md:px-px">
+                            <div class="md:px-4 md:px-2 lg:mx-4 mx-2 py-2 ">
+                                <canvas id="myChart" class="w-44 h-50 ">$</canvas>
+                            </div>
+                            <div class="px-4 mx-4 md:px-2 md:mx-1">
+                                <div class="px-4 py-2 border-l-4 border-green-900 font-bold mx-2 my-2 text-xs">
+                                    <p class="text-xs text-slate-400">Entertainment</p>
+                                    <h3>$50.00</h3>
+                                </div>
+                                <div class="px-4 py-2 border-l-4 border-cyan-400 font-bold mx-2 my-2 text-xs">
+                                    <p class="text-xs text-slate-400">Bills</p>
+                                    <h3>$750.00</h3>
+                                </div>
+                                <div class="px-4 py-2 border-l-4 border-purple-950 font-bold mx-2 my-2 text-xs">
+                                    <p class="text-xs text-slate-400">Personal Care</p>
+                                    <h3>$100.00</h3>
+                                </div>
+                                <div class="px-4 py-2 border-l-4 border-rose-200 font-bold mx-2 my-2">
+                                    <p class="text-xs text-slate-400">Dining Out</p>
+                                    <h3>$75.00</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reccuring Bills -->
+                    <div class="py-2 bg-white rounded-xl my-5 md:mb-0 mb-18">
+                        <div class="flex  text-slate-500 justify-between px-2  w-auto ">
+                            <div class=" mx-2 py-2">
+                                <h3 class="font-bold text-black">Reccuring Bills</h3>
+                            </div>
+                            <div class=" mx-2 hover:cursor-pointer">
+                                <p class="font-light text-xs align-middle">see details <i
+                                        class="text-xs  fa-solid fa-play"></i></p>
+                            </div>
+                        </div>
+                        <div class="my-3 mx-2">
+                            <div
+                                class="flex justify-between px-2 py-4 border-l-4 mx-2 my-2 rounded-md border-green-900 font-bold text-xs bg-red-50">
+                                <div class="text-sm">
+                                    <p>Paid Bills</p>
+                                </div>
+                                <div class="text-xs">
+                                    <p>$190.00</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex justify-between px-2 py-4 border-l-4 mx-2 my-2 rounded-md border-rose-200 font-bold text-xs bg-red-50">
+                                <div class=" text-sm">
+                                    <p>Total Upcoming</p>
+                                </div>
+                                <div class="text-xs">
+                                    <p>$194.98</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex justify-between px-2 py-4 border-l-4 mx-2 my-2 rounded-md border-cyan-400 bg-red-50 font-bold text-xs">
+                                <div class="text-sm">
+                                    <p>Due Soon</p>
+                                </div>
+                                <div class="text-xs">
+                                    <p>$59.98</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
